@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUROSTORE - Top Up & Bongkar Kilat</title>
+    <title>KUROSTORE - Top Up &amp; Bongkar Kilat</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -28,7 +28,7 @@
     <header class="bg-slate-900 border-b border-sky-500/30 py-6 text-center sticky top-0 z-50 backdrop-blur-md bg-opacity-80">
         <div class="container mx-auto px-4">
             <h1 class="text-2xl md:text-4xl font-black text-amber-400 tracking-wider uppercase flex justify-center items-center gap-2">
-                🔥 KUROSTORE - TOP UP & BONGKAR KILAT 🔥
+                🔥 KUROSTORE - TOP UP &amp; BONGKAR KILAT 🔥
             </h1>
             <p class="text-sm md:text-base text-sky-400 mt-2 font-medium">
                 Klik pada item nominal yang ingin Anda order bosku! 🚀
@@ -236,49 +236,19 @@
 
         // Fungsi Deteksi Klik Daftar Nominal Top Up
         function pilihNominalTopUp(valueNominal) {
-            // Pindahkan tab ke Top Up
             pindahTab('topup');
-            
-            // Set element select option sesuai value yang di-klik
             const selectTopUp = document.getElementById('topup_nominal');
             selectTopUp.value = valueNominal;
-            
-            // Jalankan hitung harga otomatis
             hitungHargaTopUp();
-            
-            // Berikan fokus scroll ke area formulir dengan mulus
             document.getElementById('section-form-anchor').scrollIntoView({ behavior: 'smooth' });
         }
 
         // Fungsi Deteksi Klik Daftar Nominal Bongkar
         function pilihNominalBongkar(jumlahB) {
-            // Pindahkan tab ke Bongkar
             pindahTab('bongkar');
-            
-            // Isikan nilai angka ke input jumlah bongkar
             const inputBongkar = document.getElementById('bongkar_jumlah');
             inputBongkar.value = jumlahB;
-            
-            // Jalankan perhitungan kalkulator rupiah bongkar
             hitungPencairanBongkar();
-            
-            // Berikan fokus scroll ke area formulir dengan mulus
-            document.getElementById('section-form-anchor').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Fungsi Deteksi Klik Daftar Nominal Bongkar
-        function pilihNominalBongkar(jumlahB) {
-            // Pindahkan tab ke Bongkar
-            pindahTab('bongkar');
-            
-            // Isikan nilai angka ke input jumlah bongkar
-            const inputBongkar = document.getElementById('bongkar_jumlah');
-            inputBongkar.value = jumlahB;
-            
-            // Jalankan perhitungan kalkulator rupiah bongkar
-            hitungPencairanBongkar();
-            
-            // Berikan fokus scroll ke area formulir dengan mulus
             document.getElementById('section-form-anchor').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -288,6 +258,7 @@
             if(jenis === 'topup') {
                 document.getElementById('form-topup').classList.remove('hidden');
                 document.getElementById('form-bongkar').classList.add('hidden');
+                document.getElementById('btn-tab-topup').classList.add('tab-active');
                 document.getElementById('btn-tab-topup').classList.add('tab-active');
                 document.getElementById('btn-tab-topup').classList.remove('text-slate-400');
                 document.getElementById('btn-tab-bongkar').classList.remove('tab-active');

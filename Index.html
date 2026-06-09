@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUROSTORE - Top Up & Bongkar Kilat</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #e6edf3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .glow-box {
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .tab-active {
+            background-color: #38bdf8;
+            color: #0f172a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+    <header class="bg-slate-900 border-b border-sky-500/30 py-6 text-center sticky top-0 z-50 backdrop-blur-md bg-opacity-80">
+        <div class="container mx-auto px-4">
+            <h1 class="text-2xl md:text-4xl font-black text-amber-400 tracking-wider uppercase flex justify-center items-center gap-2">
+                🔥 KUROSTORE - TOP UP & BONGKAR KILAT 🔥
+            </h1>
+            <p class="text-sm md:text-base text-sky-400 mt-2 font-medium">
+                Klik pada item nominal yang ingin Anda order bosku! 🚀
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-5xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-slate-900/60 p-6 rounded-2xl glow-box">
+                <h2 class="text-xl font-bold text-amber-400 border-b border-slate-700 pb-3 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-coins"></i> PRICE LIST MILLION (M) <span class="text-[10px] text-slate-400 font-normal italic">(Klik untuk beli)</span>
+                </h2>
+                <p class="text-xs text-slate-400 mb-4 italic">Kelipatan Rp 6.500 per 100M</p>
+                <div class="space-y-2">
+                    <div onclick="pilihNominalTopUp('100M')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-sky-400">⚡ 100M</span>
+                        <span class="font-bold text-emerald-400">Rp 6.500 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                    <div onclick="pilihNominalTopUp('200M')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-sky-400">⚡ 200M</span>
+                        <span class="font-bold text-emerald-400">Rp 13.000 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                    <div onclick="pilihNominalTopUp('300M')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-sky-400">⚡ 300M</span>
+                        <span class="font-bold text-emerald-400">Rp 19.500 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                    <div onclick="pilihNominalTopUp('500M')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-sky-400">⚡ 500M</span>
+                        <span class="font-bold text-emerald-400">Rp 32.500 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                    <div onclick="pilihNominalTopUp('900M')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-sky-400">⚡ 900M</span>
+                        <span class="font-bold text-emerald-400">Rp 58.500 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/60 p-6 rounded-2xl glow-box">
+                <h2 class="text-xl font-bold text-sky-400 border-b border-slate-700 pb-3 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-gem"></i> PRICE LIST BILLION (B) 👑 <span class="text-[10px] text-slate-400 font-normal italic">(Klik untuk beli)</span>
+                </h2>
+                <p class="text-xs text-amber-400 mb-4 font-semibold">Ambil Banyak = Jauh Lebih Hemat!</p>
+                <div class="space-y-2">
+                    <div onclick="pilihNominalTopUp('1B')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-amber-400">⭐ 1B</span>
+                        <span class="font-bold text-emerald-400">Rp 57.000 <span class="text-[10px] text-rose-400">(Save Rp 8rb!)</span> <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                    <div onclick="pilihNominalTopUp('2B')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-amber-400">⭐ 2B</span>
+                        <span class="font-bold text-emerald-400">Rp 114.000 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                    <div onclick="pilihNominalTopUp('5B')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-amber-400">⭐ 5B</span>
+                        <span class="font-bold text-emerald-400">Rp 285.000 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                    <div onclick="pilihNominalTopUp('9B')" class="flex justify-between items-center bg-slate-800/50 hover:bg-sky-500/20 hover:border-sky-500 p-2.5 rounded-lg border border-slate-700 text-sm cursor-pointer transition">
+                        <span class="font-semibold text-amber-400">⭐ 9B</span>
+                        <span class="font-bold text-emerald-400">Rp 513.000 <i class="fa-solid fa-chevron-right text-xs ml-1 opacity-60"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-900/80 p-5 rounded-2xl glow-box mb-8 border-dashed border-amber-500/40 text-center">
+            <h2 class="text-lg font-bold text-amber-400 mb-3 flex justify-center items-center gap-2">
+                <i class="fa-solid fa-arrow-down-up-lock"></i> KAMI MENERIMA BONGKARAN CHIP (KAMI BELI) <span class="text-[10px] text-slate-400 font-normal italic">(Klik untuk bongkar)</span>
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto text-sm">
+                <div onclick="pilihNominalBongkar(1)" class="bg-slate-950 px-4 py-2 rounded-xl border border-slate-800 hover:border-amber-500 hover:bg-amber-500/10 cursor-pointer transition flex justify-between items-center sm:justify-center gap-2">
+                    <span>📥 Mau Bongkar <span class="text-amber-400 font-bold">1B</span></span>
+                    <span class="text-emerald-400 font-bold font-mono">Dapat Rp 45.000</span>
+                </div>
+                <div onclick="pilihNominalBongkar(5)" class="bg-slate-950 px-4 py-2 rounded-xl border border-slate-800 hover:border-amber-500 hover:bg-amber-500/10 cursor-pointer transition flex justify-between items-center sm:justify-center gap-2">
+                    <span>📥 Mau Bongkar <span class="text-amber-400 font-bold">5B</span></span>
+                    <span class="text-emerald-400 font-bold font-mono">Dapat Rp 225.000</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="section-form-anchor" class="max-w-2xl mx-auto mb-6 flex rounded-xl bg-slate-900 p-1.5 border border-slate-800">
+            <button onclick="pindahTab('topup')" id="btn-tab-topup" class="w-1/2 py-3 rounded-lg text-sm transition font-medium cursor-pointer tab-active">
+                <i class="fa-solid fa-cart-shopping mr-1"></i> MENU 1: TOP UP CHIP
+            </button>
+            <button onclick="pindahTab('bongkar')" id="btn-tab-bongkar" class="w-1/2 py-3 rounded-lg text-sm transition font-medium cursor-pointer text-slate-400 hover:text-white">
+                <i class="fa-solid fa-upload mr-1"></i> MENU 2: BONGKAR CHIP
+            </button>
+        </div>
+
+        <div class="max-w-2xl mx-auto">
+            
+            <div id="form-topup" class="bg-slate-900/90 p-6 rounded-2xl glow-box">
+                <h3 class="text-md font-bold text-sky-400 mb-4 uppercase tracking-wide"><i class="fa-solid fa-circle-dollar-to-slot"></i> Formulir Top Up Chip</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">ID GAME &amp; NICKNAME</label>
+                        <input type="text" id="topup_id" placeholder="Contoh: 12345678 (KuroGamer)" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-sm focus:outline-none focus:border-sky-500 text-white">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">PILIH NOMINAL</label>
+                        <select id="topup_nominal" onchange="hitungHargaTopUp()" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-sm text-slate-300 focus:outline-none">
+                            <option value="" data-harga="0" disabled selected>-- Pilih Nominal --</option>
+                            <option value="100M" data-harga="6500">100M - Rp 6.500</option>
+                            <option value="200M" data-harga="13000">200M - Rp 13.000</option>
+                            <option value="300M" data-harga="19500">300M - Rp 19.500</option>
+                            <option value="500M" data-harga="32500">500M - Rp 32.500</option>
+                            <option value="900M" data-harga="58500">900M - Rp 58.500</option>
+                            <option value="1B" data-harga="57000">1B - Rp 57.000</option>
+                            <option value="2B" data-harga="114000">2B - Rp 114.000</option>
+                            <option value="5B" data-harga="285000">5B - Rp 285.000</option>
+                            <option value="9B" data-harga="513000">9B - Rp 513.000</option>
+                        </select>
+                    </div>
+                    <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Total Pembayaran Anda:</span>
+                        <span id="topup_total" class="text-md font-bold text-emerald-400">Rp 0</span>
+                    </div>
+                    <button type="button" onclick="prosesTopUp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-lg transition shadow-lg cursor-pointer">
+                        <i class="fa-solid fa-wallet mr-1"></i> TAMPILKAN AKUN PEMBAYARAN
+                    </button>
+                </div>
+            </div>
+
+            <div id="form-bongkar" class="hidden bg-slate-900/90 p-6 rounded-2xl border-2 border-amber-500/50 shadow-lg shadow-amber-950/20">
+                <h3 class="text-md font-bold text-amber-400 mb-4 uppercase tracking-wide"><i class="fa-solid fa-reply-all"></i> Formulir Bongkar Chip</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">ID GAME &amp; NICKNAME ANDA</label>
+                        <input type="text" id="bongkar_id" placeholder="Masukkan ID Game &amp; Nickname Pengirim" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-sm focus:outline-none focus:border-amber-500 text-white">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">JUMLAH CHIP YANG AKAN DIBONGKAR (B)</label>
+                        <input type="number" id="bongkar_jumlah" oninput="hitungPencairanBongkar()" placeholder="Contoh tulis angka saja: 2 (Artinya 2B)" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-sm focus:outline-none focus:border-amber-500 text-white">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">NAMA BANK / E-WALLET ANDA &amp; NO. REKENING</label>
+                        <textarea id="bongkar_rekening" rows="2" placeholder="Contoh:&#10;DANA - 08123456789 (Atas Nama Anda)&#10;Atau Bank BCA - 12345678 (Atas Nama Anda)" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-sm focus:outline-none focus:border-amber-500 text-white text-left"></textarea>
+                    </div>
+                    <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Total Uang Yang Akan Anda Terima:</span>
+                        <span id="bongkar_total" class="text-md font-bold text-amber-400">Rp 0</span>
+                    </div>
+
+                    <div class="bg-amber-500/10 border border-amber-500/40 p-4 rounded-xl text-left space-y-2">
+                        <p class="text-xs font-bold text-amber-400 uppercase tracking-wide"><i class="fa-solid fa-circle-exclamation animate-pulse"></i> LANGKAH WAJIB BONGKAR:</p>
+                        <ol class="text-xs text-slate-300 list-decimal list-inside space-y-1">
+                            <li>Kirim chip sesuai jumlah bongkar ke ID: <span class="bg-slate-950 text-amber-400 font-mono font-bold px-1.5 py-0.5 rounded border border-slate-800 select-all">1038694904</span> <span class="font-bold text-white">(KURO ID)</span></li>
+                            <li>Wajib ambil <span class="text-amber-400 font-bold">Screenshot (Bukti Pengiriman)</span> setelah chip sukses terkirim.</li>
+                            <li>Klik tombol kuning di bawah untuk mengirim data dan sertakan bukti foto ke WhatsApp Admin!</li>
+                        </ol>
+                    </div>
+
+                    <button type="button" onclick="kirimFormBongkar()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-lg transition shadow-lg cursor-pointer">
+                        <i class="fa-brands fa-whatsapp mr-1 text-base"></i> KIRIM DATA &amp; SERTAKAN BUKTI SCREENSHOT
+                    </button>
+                </div>
+            </div>
+
+            <div id="panel_pembayaran" class="hidden mt-6 bg-slate-900 border-2 border-emerald-500/50 rounded-2xl p-5 text-center">
+                <h3 class="text-md font-bold text-amber-400 mb-1">💸 INSTRUKSI PEMBAYARAN 💸</h3>
+                <p class="text-xs text-slate-400 mb-4">Silakan transfer dan kirim bukti transaksi di bawah:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                        <span class="bg-amber-500 text-slate-950 font-bold text-[10px] px-2 py-0.5 rounded-full uppercase">Pilihan 1: SCAN QRIS</span>
+                        <div class="flex justify-center my-3">
+                            <img src="qris.png" alt="QRIS KuroStore" class="w-40 h-auto rounded-lg border border-slate-700 bg-white p-1">
+                        </div>
+                        <p class="text-[9px] text-slate-400">NMID: ID1024365599355<br>All E-Wallet &amp; M-Banking</p>
+                    </div>
+
+                    <div class="text-left space-y-2 text-xs">
+                        <span class="bg-sky-500 text-white font-bold text-[10px] px-2 py-0.5 rounded-full uppercase block text-center">Pilihan 2: REKENING &amp; EWALLET MANUAl</span>
+                        <div class="bg-slate-950 p-2.5 rounded-lg border border-slate-800">
+                            <p class="text-[10px] text-sky-400 font-bold">🏛️ REKENING BANK</p>
+                            <p class="mt-0.5">BCA: <span class="text-amber-400 font-mono font-bold">6175605995</span></p>
+                            <p>SEABANK: <span class="text-amber-400 font-mono font-bold">901660264617</span></p>
+                        </div>
+                        <div class="bg-slate-950 p-2.5 rounded-lg border border-slate-800">
+                            <p class="text-[10px] text-emerald-400 font-bold">📱 AKUN E-WALLET</p>
+                            <p class="mt-0.5">DANA / GOPAY: <span class="text-amber-400 font-mono font-bold">083196506142</span></p>
+                            <p>OVO: <span class="text-amber-400 font-mono font-bold">083177206301</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-slate-800">
+                    <button onclick="kirimTopUpWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-lg cursor-pointer transition flex justify-center items-center gap-1.5 text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> SAYA SUDAH TRANSFER, KIRIM BUKTI BAYAR
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-6 text-[11px] text-slate-600 border-t border-slate-900 mt-12">
+        &copy; 2026 KUROSTORE. All rights reserved. Developed for HDI &amp; RD Top Up Platform.
+    </footer>
+
+    <script>
+        const nomorWA = "62895634550641"; 
+        let hargaTopUpGlobal = 0;
+
+        // Fungsi Deteksi Klik Daftar Nominal Top Up
+        function pilihNominalTopUp(valueNominal) {
+            // Pindahkan tab ke Top Up
+            pindahTab('topup');
+            
+            // Set element select option sesuai value yang di-klik
+            const selectTopUp = document.getElementById('topup_nominal');
+            selectTopUp.value = valueNominal;
+            
+            // Jalankan hitung harga otomatis
+            hitungHargaTopUp();
+            
+            // Berikan fokus scroll ke area formulir dengan mulus
+            document.getElementById('section-form-anchor').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Fungsi Deteksi Klik Daftar Nominal Bongkar
+        function pilihNominalBongkar(jumlahB) {
+            // Pindahkan tab ke Bongkar
+            pindahTab('bongkar');
+            
+            // Isikan nilai angka ke input jumlah bongkar
+            const inputBongkar = document.getElementById('bongkar_jumlah');
+            inputBongkar.value = jumlahB;
+            
+            // Jalankan perhitungan kalkulator rupiah bongkar
+            hitungPencairanBongkar();
+            
+            // Berikan fokus scroll ke area formulir dengan mulus
+            document.getElementById('section-form-anchor').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Fungsi Deteksi Klik Daftar Nominal Bongkar
+        function pilihNominalBongkar(jumlahB) {
+            // Pindahkan tab ke Bongkar
+            pindahTab('bongkar');
+            
+            // Isikan nilai angka ke input jumlah bongkar
+            const inputBongkar = document.getElementById('bongkar_jumlah');
+            inputBongkar.value = jumlahB;
+            
+            // Jalankan perhitungan kalkulator rupiah bongkar
+            hitungPencairanBongkar();
+            
+            // Berikan fokus scroll ke area formulir dengan mulus
+            document.getElementById('section-form-anchor').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Fungsi Ganti Menu Tab (Top Up / Bongkar)
+        function pindahTab(jenis) {
+            document.getElementById('panel_pembayaran').classList.add('hidden');
+            if(jenis === 'topup') {
+                document.getElementById('form-topup').classList.remove('hidden');
+                document.getElementById('form-bongkar').classList.add('hidden');
+                document.getElementById('btn-tab-topup').classList.add('tab-active');
+                document.getElementById('btn-tab-topup').classList.remove('text-slate-400');
+                document.getElementById('btn-tab-bongkar').classList.remove('tab-active');
+                document.getElementById('btn-tab-bongkar').classList.add('text-slate-400');
+            } else {
+                document.getElementById('form-topup').classList.add('hidden');
+                document.getElementById('form-bongkar').classList.remove('hidden');
+                document.getElementById('btn-tab-topup').classList.remove('tab-active');
+                document.getElementById('btn-tab-topup').classList.add('text-slate-400');
+                document.getElementById('btn-tab-bongkar').classList.add('tab-active');
+                document.getElementById('btn-tab-bongkar').classList.remove('text-slate-400');
+            }
+        }
+
+        function hitungHargaTopUp() {
+            const select = document.getElementById('topup_nominal');
+            hargaTopUpGlobal = select.options[select.selectedIndex].getAttribute('data-harga');
+            document.getElementById('topup_total').innerText = 'Rp ' + parseInt(hargaTopUpGlobal).toLocaleString('id-ID');
+        }
+
+        function prosesTopUp() {
+            const id = document.getElementById('topup_id').value;
+            const nominal = document.getElementById('topup_nominal').value;
+            if(!id || !nominal) { alert('Harap lengkapi ID Game & Nominal!'); return; }
+            
+            const panel = document.getElementById('panel_pembayaran');
+            panel.classList.remove('hidden');
+            panel.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function kirimTopUpWhatsApp() {
+            const id = document.getElementById('topup_id').value;
+            const nominal = document.getElementById('topup_nominal').value;
+            const total = 'Rp ' + parseInt(hargaTopUpGlobal).toLocaleString('id-ID');
+
+            const pesan = `Halo KuroStore, saya sudah melakukan pembayaran!%0A%0A` +
+                          `🛒 *PESANAN* : TOP UP CHIP%0A` +
+                          `👤 *ID & Nickname* : ${encodeURIComponent(id)}%0A` +
+                          `💎 *Nominal* : ${encodeURIComponent(nominal)}%0A` +
+                          `💰 *Total Transfer* : ${encodeURIComponent(total)}%0A%0A` +
+                          `Berikut bukti transfer saya lampirkan. Mohon diproses secepatnya! ✨`;
+            window.open(`https://api.whatsapp.com/send?phone=${nomorWA}&text=${pesan}`, '_blank');
+        }
+
+        function hitungPencairanBongkar() {
+            const jumlahB = parseFloat(document.getElementById('bongkar_jumlah').value) || 0;
+            const totalPencairan = jumlahB * 45000;
+            document.getElementById('bongkar_total').innerText = 'Rp ' + totalPencairan.toLocaleString('id-ID');
+        }
+
+        function kirimFormBongkar() {
+            const id = document.getElementById('bongkar_id').value;
+            const jumlahB = document.getElementById('bongkar_jumlah').value;
+            const rekening = document.getElementById('bongkar_rekening').value;
+            
+            if(!id || !jumlahB || !rekening) { 
+                alert('Form Bongkar belum lengkap bosku! Mohon diisi semuanya.'); 
+                return; 
+            }
+
+            const totalTerima = 'Rp ' + (parseFloat(jumlahB) * 45000).toLocaleString('id-ID');
+
+            const pesan = `Halo KuroStore, saya mau konfirmasi BONGKAR CHIP nih!%0A%0A` +
+                          `📥 *PESANAN* : BONGKAR (JUAL CHIP)%0A` +
+                          `👤 *ID Game & Nickname Pengirim* : ${encodeURIComponent(id)}%0A` +
+                          `📦 *Jumlah Bongkar* : ${encodeURIComponent(jumlahB)} B%0A` +
+                          `🎯 *Dikirim ke* : ID 1038694904 (KURO ID)%0A` +
+                          `💳 *Rekening Pencairan Saya* :%0A${encodeURIComponent(rekening)}%0A%0A` +
+                          `💰 *Total Yang Harus Saya Terima* : *${encodeURIComponent(totalTerima)}*%0A%0A` +
+                          `*(Berikut saya lampirkan bukti Screenshot pengiriman chip-nya di bawah ya kak)*`;
+            window.open(`https://api.whatsapp.com/send?phone=${nomorWA}&text=${pesan}`, '_blank');
+        }
+    </script>
+</body>
+</html>
